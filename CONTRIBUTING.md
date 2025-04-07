@@ -16,6 +16,7 @@ The following prerequisites are required to build the project locally:
 - [Yarn](https://yarnpkg.com/getting-started/install)
 
 If you want to run the local API server for the AI Assistant, you also need to install [Deno](https://github.com/denoland/deno?tab=readme-ov-file#installation).
+Using shell installation method is recommended (to have access to the `upgrade` command that allow to install specific Deno version) the Deno app on Netlify run on Deno v1.46.3 during development you can use this specific version too with `deno upgrade --version 1.46.3`
 
 ### Installing dependencies
 From the root directory:
