@@ -1,5 +1,10 @@
 # Changelog
 
+
+## 0.2.0 (2025-06-17)
+
+- Add security contact in contract info ([#564](https://github.com/OpenZeppelin/contracts-wizard/pull/564))
+
 ## 0.2.0-alpha.4 (2025-03-10)
 
 - **Breaking changes**:
