@@ -129,6 +129,7 @@
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(aiAssistantRequest),
+      redirect: 'error',
     })
       .then(async response => {
         const reader = response.body?.getReader();
@@ -185,7 +186,7 @@
       .catch(error => {
         addMessage({
           role: 'assistant',
-          content: 'Error calling API. See console for details.',
+          content: 'Error calling AI assistant. Please try again later. See console for details.',
         });
         console.log(error);
         inProgress = false;
