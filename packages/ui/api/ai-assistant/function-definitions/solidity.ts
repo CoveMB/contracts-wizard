@@ -158,9 +158,9 @@ export const solidityStablecoinAIFunctionDefinition = {
     type: 'object',
     properties: {
       ...solidityERC20AIFunctionDefinition.parameters.properties,
-      custodian: {
+      freezable: {
         type: 'boolean',
-        description: solidityStablecoinDescriptions.custodian,
+        description: solidityStablecoinDescriptions.freezable,
       },
       restrictions: {
         anyOf: [
@@ -211,7 +211,7 @@ export const solidityAccountAIFunctionDefinition = {
       signer: {
         anyOf: [
           { type: 'boolean', enum: [false] },
-          { type: 'string', enum: ['ECDSA', 'EIP7702', 'P256', 'RSA', 'Multisig', 'MultisigWeighted'] },
+          { type: 'string', enum: ['ECDSA', 'EIP7702', 'P256', 'Multisig', 'MultisigWeighted', 'RSA', 'WebAuthn'] },
         ],
         description: solidityAccountDescriptions.signer,
       },

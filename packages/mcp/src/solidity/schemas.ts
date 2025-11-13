@@ -108,7 +108,7 @@ export const stablecoinSchema = {
     .or(z.literal('blocklist'))
     .optional()
     .describe(solidityStablecoinDescriptions.restrictions),
-  custodian: z.boolean().optional().describe(solidityStablecoinDescriptions.custodian),
+  freezable: z.boolean().optional().describe(solidityStablecoinDescriptions.freezable),
 } as const satisfies z.ZodRawShape;
 
 export const rwaSchema = stablecoinSchema;
@@ -127,10 +127,11 @@ export const accountSchema = {
     .literal(false)
     .or(z.literal('ECDSA'))
     .or(z.literal('EIP7702'))
-    .or(z.literal('P256'))
-    .or(z.literal('RSA'))
     .or(z.literal('Multisig'))
     .or(z.literal('MultisigWeighted'))
+    .or(z.literal('P256'))
+    .or(z.literal('RSA'))
+    .or(z.literal('WebAuthn'))
     .optional()
     .describe(solidityAccountDescriptions.signer),
   batchedExecution: z.boolean().optional().describe(solidityAccountDescriptions.batchedExecution),
